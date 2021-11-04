@@ -3,8 +3,13 @@ package io.turntabl;
 public class Corporate extends Client {
     private AccountManager accountManager;
 
-    public Corporate(String clientId, String name, ServiceLevel level) {
+//    public Corporate(String clientId, String name, ServiceLevel level) {
+//        super(clientId, name, level);
+//    }
+
+    public Corporate(String clientId, String name, ServiceLevel level, AccountManager accountManager) {
         super(clientId, name, level);
+        this.accountManager = accountManager;
     }
 
     @Override

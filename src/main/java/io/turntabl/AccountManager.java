@@ -1,20 +1,16 @@
 package io.turntabl;
 
 public class AccountManager {
-    private int id;
+    private final String id;
     private String  name;
 
-    public AccountManager(int id, String name) {
+    public AccountManager(String id, String name) {
         this.id = id;
         this.name = name;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getName() {
@@ -27,6 +23,6 @@ public class AccountManager {
 
     @Override
     public String toString() {
-        return String.format("{\nID: %d\tName: %s\t\n}", getId(), getName());
+        return String.format("{\nID: %s\tName: %s\t\n}", getId(), getName());
     }
 }

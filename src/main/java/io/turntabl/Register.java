@@ -27,10 +27,10 @@ public class Register {
                 .map(Client::getContactPerson).findFirst();
     }
 
-    public void countByLevel() {
-        Map<ServiceLevel, Long> clientCountByLevel = clients.stream()
+    public Map<ServiceLevel, Long> countByLevel() {
+        return  clients.stream()
                 .collect(Collectors.groupingBy(Client::getLevel, Collectors.counting()));
-        clientCountByLevel.forEach(((level, aLong) -> System.out.printf("%s has %d clients(s)%n", level, aLong)));
+//        clientCountByLevel.forEach(((level, aLong) -> System.out.printf("%s has %d clients(s)%n", level, aLong)));
     }
 
     @Override
